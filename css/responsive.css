@@ -1,0 +1,201 @@
+/* 
+  Responsive Styles for Portfolio Website
+  Author: Nij Bhavsar
+  Year: 2025
+*/
+
+/* ---------- Tablet (768px - 1024px) ---------- */
+@media screen and (max-width: 1500px) {
+  .container {
+    padding: 0 var(--spacing-s);
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-l);
+  }
+  
+  .hero-text {
+    order: 2;
+  }
+  
+  .hero-image {
+    order: 1;
+    justify-content: center;
+  }
+  
+  .description {
+    margin: 0 auto var(--spacing-m);
+  }
+  
+  .cta-buttons {
+    justify-content: center;
+  }
+  
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .about-image, .about-text {
+    width: 100%;
+  }
+  
+  .about-image {
+    margin-bottom: var(--spacing-m);
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .contact-content {
+    flex-direction: column;
+    gap: var(--spacing-l);
+  }
+}
+
+/* ---------- Mobile (< 768px) ---------- */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: var(--spacing-xs) 0;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--section-bg);
+    padding: 6rem var(--spacing-m) var(--spacing-m);
+    transition: var(--transition);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    z-index: 98;
+  }
+  
+  .navbar.active {
+    right: 0;
+  }
+  
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar ul li {
+    margin: 0 0 var(--spacing-s) 0;
+    width: 100%;
+  }
+  
+  .navbar ul li a {
+    display: block;
+    padding: var(--spacing-xs) 0;
+  }
+  
+  .hamburger {
+    display: block;
+    z-index: 99;
+  }
+  
+  .hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  .hero-section {
+    padding-top: 4rem;
+  }
+  
+  .name {
+    font-size: 2.5rem;
+  }
+  
+  .tagline {
+    font-size: 1.8rem;
+  }
+  
+  .image-container {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-filters {
+    flex-wrap: wrap;
+  }
+  
+  .project-filter {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ---------- Small Mobile (< 480px) ---------- */
+@media screen and (max-width: 480px) {
+  .name {
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+  }
+  
+  .image-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: var(--spacing-s);
+  }
+  
+  .primary-btn, .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .education-item {
+    padding-left: var(--spacing-xs);
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact-item i {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
