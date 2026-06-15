@@ -116,9 +116,16 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
-      // In a real application, you would send this data to a server
-      // For now, we'll just show a success message
-      alert('Thank you for your message! I\'ll get back to you soon.');
+      // Build a mailto link to open user's email client prefilled with the message
+      const ownerEmail = 'nijbhavsar4433@gmail.com';
+      const mailSubject = subject || 'Contact from portfolio website';
+      const mailBody = `Name: ${name}\n\nSubject: ${subject}\n\nMessage: ${message}`;
+      const mailtoLink = `mailto:${ownerEmail}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+      // Open the default mail client
+      window.location.href = mailtoLink;
+
+      // Optionally reset the form after opening mail client
       contactForm.reset();
     });
   }

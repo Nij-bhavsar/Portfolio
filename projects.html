@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nij Bhavsar | Projects</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="logo">
+        <h1><a href="index.html"><span>NB</span></a></h1>
+      </div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <a
+            href="assets/Nij_Bhavsar_resume.pdf"
+            class="resume-btn"
+            download="assets/Nij_Bhavsar_resume.pdf"
+            >
+            Download Resume
+          </a>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Projects Page -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Projects</h2>
+        <span class="line"></span>
+      </div>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="ml">ML/AI</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-category="web" data-slug="messhub">
+          <div class="project-img">
+            <img src="assets/Homepage_MH.png" alt="MESS HUB" />
+          </div>
+          <div class="project-content">
+            <h3>MessHub</h3>
+            <p>A Website in which we can manage our Mess Management easily.</p>
+            <div class="project-tech">
+              <span>REACT JS</span>
+              <span>ASPDOTNET WEB API</span>
+              <span>SQL SERVER</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web" data-slug="contract-management-system">
+          <div class="project-img">
+            <img src="assets/CMS_loginpage.png" alt="Contract Management System preview" />
+          </div>
+          <div class="project-content">
+            <h3>Contract Management System</h3>
+            <p>A project management-focused website to streamline contractor and worker coordination and task tracking.</p>
+            <div class="project-tech">
+              <span>REACT JS</span>
+              <span>ASPDOTNET WEB API</span>
+              <span>SQL SERVER</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web" data-slug="tracelly">
+          <div class="project-img">
+            <img src="assets/TR_loginpage.png" alt="Tracelly preview" />
+          </div>
+          <div class="project-content">
+            <h3>Tracelly - Lost & Found</h3>
+            <p>A Website in which we can report our lost items easily.</p>
+            <div class="project-tech">
+              <span>REACT JS</span>
+              <span>EXPRESS JS</span>
+              <span>MONGODB</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="index.html"><span></span>Nij D. Bhavsar<span></span></a>
+        </div>
+        <p>© 2026 Nij Bhavsar. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+
+</html>

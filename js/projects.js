@@ -80,36 +80,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Project Modal (click to show more details)
+  // Project click -> open detail page
   const projectImages = document.querySelectorAll('.project-img');
   
   if (projectImages.length) {
     projectImages.forEach(img => {
       img.addEventListener('click', function() {
-        const projectTitle = this.parentElement.querySelector('.project-content h3').textContent;
-        const projectDescription = this.parentElement.querySelector('.project-content p').textContent;
-        const projectTechs = this.parentElement.querySelectorAll('.project-tech span');
-        
-        let techsHtml = '';
-        projectTechs.forEach(tech => {
-          techsHtml += `<span>${tech.textContent}</span>`;
-        });
-        
-        // In a real application, you would display a modal with more project details
-        // For this example, we'll just show a simple alert
-        alert(`${projectTitle}\n\n${projectDescription}`);
+        const card = this.closest('.project-card');
+        const slug = card ? card.getAttribute('data-slug') : null;
+        if (slug) {
+          window.location.href = `project-category/project-${slug}.html`;
+        } else {
+          const projectTitle = card.querySelector('.project-content h3').textContent;
+          const projectDescription = card.querySelector('.project-content p').textContent;
+          alert(`${projectTitle}\n\n${projectDescription}`);
+        }
       });
     });
   }
-  
-  // Project hover effect
+
+  // Also make the whole card clickable (keeps same behavior)
   projectCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-      this.querySelector('.project-img img').style.transform = 'scale(1.05)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-      this.querySelector('.project-img img').style.transform = 'scale(1)';
+    card.addEventListener('click', function(e) {
+      // Prevent double navigation when clicking on links or buttons inside card
+      const tag = e.target.tagName.toLowerCase();
+      if (tag === 'a' || tag === 'button') return;
+      const slug = this.getAttribute('data-slug');
+      if (slug) window.location.href = `project-category/project-${slug}.html`;
     });
   });
+  
 });
